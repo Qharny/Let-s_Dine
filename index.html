@@ -50,17 +50,31 @@
                     Experience the perfect blend of taste and tradition with our carefully crafted dishes.
                     From farm-fresh ingredients to expert preparation, every bite tells a story of culinary excellence.
                 </p>
-                <p id="total">Total order: <span id="number">₵50.99</span></p>
+                <p id="total">Total Price: <span id="number">₵50.99</span></p>
                 <button title="order">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <p>Buy Now</p>
                 </button>
             </div>
-
+    
             <div class="foodimage">
-                <img src="./assets/img/fish.png" alt="Featured Dish" class="main-dish">
+                <div class="slider-nav">
+                    <button title="previous" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                    <button title="next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="food-slider">
+                    <div class="food-slide active">
+                        <img src="./assets/img/fish.png" alt="Grilled Fish" data-price="50.99">
+                    </div>
+                    <div class="food-slide">
+                        <img src="./assets/img/banku.png" alt="banku" data-price="45.99">
+                    </div>
+                    <div class="food-slide">
+                        <img src="./assets/img/rice.png" alt="Beef Burger" data-price="35.99">
+                    </div>
+                </div>
             </div>
-
+    
             <div class="images">
                 <img id="img1" src="./assets/img/onion.png" alt="Ingredient 1" class="floating-ingredient">
                 <img id="img2" src="./assets/img/tomato.png" alt="Ingredient 2" class="floating-ingredient">
@@ -246,6 +260,142 @@
                 </div>
             </div>
         </section>
+
+        <!-- Shop section -->
+<section id="shop" class="shop">
+    <h2>Our Food Shop</h2>
+    <div class="shop-filter">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="main">Main Course</button>
+        <button class="filter-btn" data-category="dessert">Desserts</button>
+        <button class="filter-btn" data-category="beverage">Beverages</button>
+    </div>
+    <div class="shop-container">
+        <!-- Shop Item 1 -->
+        <div class="shop-item" data-category="main">
+            <div class="shop-image">
+                <!-- <img src="./assets/img/jollof1.jpg" alt="Jollof Rice"> -->
+                <div class="shop-overlay">
+                    <button class="quick-view">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="add-wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="shop-content">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(4.5)</span>
+                </div>
+                <h3>Jollof Rice Special</h3>
+                <p class="price">₵45.99</p>
+                <button class="add-to-cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Shop Item 2 -->
+        <div class="shop-item" data-category="main">
+            <div class="shop-image">
+                <img src="./assets/img/banku.png" alt="Banku">
+                <div class="shop-overlay">
+                    <button class="quick-view">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="add-wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="shop-content">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(4.0)</span>
+                </div>
+                <h3>Banku and Tilapia</h3>
+                <p class="price">₵55.99</p>
+                <button class="add-to-cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Shop Item 3 -->
+        <div class="shop-item" data-category="dessert">
+            <div class="shop-image">
+                <img src="./assets/img/dish.png" alt="Dessert">
+                <div class="shop-overlay">
+                    <button class="quick-view">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="add-wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="shop-content">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>(5.0)</span>
+                </div>
+                <h3>Special Dessert</h3>
+                <p class="price">₵35.99</p>
+                <button class="add-to-cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Shop Item 4 -->
+        <div class="shop-item" data-category="beverage">
+            <div class="shop-image">
+                <!-- <img src="./assets/img/food.jpg" alt="Smoothie"> -->
+                <div class="shop-overlay">
+                    <button class="quick-view">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="add-wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="shop-content">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                    <span>(3.5)</span>
+                </div>
+                <h3>Fresh Smoothie</h3>
+                <p class="price">₵25.99</p>
+                <button class="add-to-cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 </body>
 
