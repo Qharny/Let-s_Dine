@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let || Dine</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../../../Downloads/Compressed/fontawesome-free-6.5.2-web/css/all.css">
+    <script src="../../../Downloads/Compressed/fontawesome-free-6.5.2-web/js/all.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/all.min.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">LET<span>'S DINE</span></div>
+        <nav>
+            <div class="link"><a href="#home">Home</a></div>
+            <div class="link"><a href="#menu">Menu</a></div>
+            <div class="link"><a href="#service">Service</a></div>
+            <div class="link"><a href="#shop">Shop</a></div>
+        </nav>
+        <div class="opt">
+            <div id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="basket">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </div>
+        </div>
+        <div class="join">
+            <button id="signin" title="signin">
+                <i class="fa-solid fa-user"></i>
+                sign in
+            </button>
+            <button id="login" title="signin">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                login
+            </button>
+        </div>
+    </header>
+    <!-- main paage -->
+    <main>
+        <section id="home" class="home">
+            <div class="content">
+                <h1>Order your</h1>
+                <h3>Favourite Foods</h3>
+                <p>
+                    Experience the perfect blend of taste and tradition with our carefully crafted dishes. 
+                    From farm-fresh ingredients to expert preparation, every bite tells a story of culinary excellence.
+                </p>
+                <p id="total">Total order: <span id="number">₵50.99</span></p>
+                <button title="order">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <p>Buy Now</p>
+                </button>
+            </div>
+        
+            <div class="foodimage">
+                <img src="./assets/img/fish.png" alt="Featured Dish" class="main-dish">
+            </div>
+        
+            <div class="images">
+                <img id="img1" src="./assets/img/onion.png" alt="Ingredient 1" class="floating-ingredient">
+                <img id="img2" src="./assets/img/tomato.png" alt="Ingredient 2" class="floating-ingredient">
+                <img id="img3" src="./assets/img/tomatoes.png" alt="Ingredient 3" class="floating-ingredient">
+            </div>
+        </section>
+        <!-- Menu section -->
+        <section id="menu" class="menu">
+            <h2>Our Special Menu</h2>
+            <div class="menu-container">
+                <!-- Menu Item 1 -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="./assets/img/food.jpg" alt="Grilled Salmon">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Grilled Salmon</h3>
+                        <p>Fresh Atlantic salmon fillet grilled to perfection, served with seasonal vegetables and lemon butter sauce.</p>
+                        <div class="menu-footer">
+                            <span class="price">₵89.99</span>
+                            <button class="order-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Menu Item 2 -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="./assets/img/food.jpg" alt="Beef Steak">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Premium Beef Steak</h3>
+                        <p>Tender prime cut beef steak cooked to your preference, served with roasted potatoes and red wine sauce.</p>
+                        <div class="menu-footer">
+                            <span class="price">₵129.99</span>
+                            <button class="order-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Menu Item 3 -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="./assets/img/food.jpg" alt="Pasta">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Seafood Pasta</h3>
+                        <p>Fresh homemade pasta with mixed seafood in a rich creamy sauce, garnished with fresh herbs.</p>
+                        <div class="menu-footer">
+                            <span class="price">₵69.99</span>
+                            <button class="order-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Menu Item 4 -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="./assets/img/food.jpg" alt="Chicken">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Herb Roasted Chicken</h3>
+                        <p>Tender chicken breast marinated in herbs, served with garlic mashed potatoes and grilled vegetables.</p>
+                        <div class="menu-footer">
+                            <span class="price">₵59.99</span>
+                            <button class="order-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
