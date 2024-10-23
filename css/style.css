@@ -444,12 +444,13 @@ main {
         }
 
         .home .foodimage {
-            margin-top: 3rem;
+            display: none;
+            /* margin-top: 3rem; */
         }
 
-        .home .images img {
+        /* .home .images img {
             max-width: 100px;
-        }
+        } */
     }
 
     @media (max-width: 768px) {
@@ -467,6 +468,7 @@ main {
 
         .home .content #total {
             font-size: 1.5rem;
+            display: none;
         }
     }
 
