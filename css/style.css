@@ -47,8 +47,13 @@ header {
     transition: background-color 0.3s ease-in-out;
     padding: 0 20px;
 }
+header.scrolled{
+    background-color: #000000ab;
+    height: 70px;
+    width: 100%;
+}
 
-/* Hamburger Menu Button - Hidden by default */
+/* Hamburger Menu Button */
 .hamburger {
     display: none;
     cursor: pointer;
