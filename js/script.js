@@ -1,10 +1,10 @@
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
     const menuSection = document.querySelector('#menu');
-    
+
     if (menuSection) {
         const menuPosition = menuSection.getBoundingClientRect().top;
-        
+
         if (menuPosition <= header.offsetHeight) {
             header.classList.add('scrolled');
         } else {
@@ -13,11 +13,14 @@ window.addEventListener('scroll', function() {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelectorAll('.food-slide');
     const priceElement = document.getElementById('number');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
+    if (!slides.length || !priceElement || !prevBtn || !nextBtn) {
+        return;
+    }
     let currentSlide = 0;
     let slideInterval; // Variable to store the interval
     const intervalTime = 3000; // Time in milliseconds (3 seconds)
@@ -25,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSlide(index) {
         // Hide all slides
         slides.forEach(slide => slide.classList.remove('active'));
-        
+
         // Show current slide
         slides[index].classList.add('active');
-        
+
         // Update price
         const price = slides[index].querySelector('img').dataset.price;
         priceElement.textContent = `₵${price}`;
@@ -68,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Optional: Add keyboard navigation
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'ArrowLeft') {
             stopSlideshow();
             prevSlide();
@@ -104,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Optional: Pause slideshow when hovering over the slider
-    const slider = document.querySelector('.slider-container'); // Add this class to your slider's container
+    const slider = document.querySelector('.food-slider');
     if (slider) {
         slider.addEventListener('mouseenter', stopSlideshow);
         slider.addEventListener('mouseleave', startSlideshow);
@@ -115,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const shopItems = document.querySelectorAll('.shop-item');
 
@@ -125,9 +128,9 @@ document.addEventListener('DOMContentLoaded', function() {
             filterBtns.forEach(btn => btn.classList.remove('active'));
             // Add active class to clicked button
             btn.classList.add('active');
-            
+
             const category = btn.dataset.category;
-            
+
             // Filter items
             shopItems.forEach(item => {
                 if (category === 'all' || item.dataset.category === category) {
@@ -157,6 +160,42 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = document.body.dataset.page;
+    if (!currentPage) return;
+
+    const navLinks = document.querySelectorAll('nav a[data-page]');
+    navLinks.forEach(link => {
+        if (link.dataset.page === currentPage) {
+            link.classList.add('active');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const authForms = document.querySelectorAll('.auth-form');
+
+    authForms.forEach(form => {
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const passwordInput = form.querySelector('input[name="password"]');
+            const confirmInput = form.querySelector('input[name="confirm"]');
+
+            if (passwordInput && confirmInput && passwordInput.value !== confirmInput.value) {
+                alert('Passwords do not match. Please try again.');
+                return;
+            }
+
+            const message = form.id === 'signup-form'
+                ? 'Account created! Check your email to verify your profile.'
+                : 'Welcome back! Redirecting to your dashboard.';
+
+            alert(message);
+            form.reset();
+        });
+    });
 });
 
 const hamburger = document.querySelector('.hamburger');
