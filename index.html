@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let || Dine</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="../../../Downloads/Compressed/fontawesome-free-6.5.2-web/css/all.css">
-    <script src="../../../Downloads/Compressed/fontawesome-free-6.5.2-web/js/all.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css.map">
+    <!-- awesome font and icon script from online-->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
     <script src="./js/script.js" defer></script>
     <script src="./js/all.min.js" defer></script>
 </head>
@@ -23,6 +24,8 @@
             <div class="link"><a href="#menu">Menu</a></div>
             <div class="link"><a href="#service">Service</a></div>
             <div class="link"><a href="#shop">Shop</a></div>
+            <div class="link"><a href="#about">About</a></div>
+            <div class="link"><a href="#contact">Contact</a></div>
         </nav>
         <div class="opt">
             <div id="search">
@@ -59,8 +62,8 @@
                     <p>Buy Now</p>
                 </button>
             </div>
-    
-            <div class="foodimage">
+
+            <div class="foodimage slider-container">
                 <div class="slider-nav">
                     <button title="previous" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
                     <button title="next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
@@ -77,7 +80,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="images">
                 <img id="img1" src="./assets/img/onion.png" alt="Ingredient 1" class="floating-ingredient">
                 <img id="img2" src="./assets/img/tomato.png" alt="Ingredient 2" class="floating-ingredient">
@@ -219,7 +222,7 @@
                         <a href="#" class="learn-more">Learn More</a>
                     </div>
                 </div>
-        
+
                 <!-- Quality Food -->
                 <div class="service-box">
                     <div class="service-icon">
@@ -233,7 +236,7 @@
                         <a href="#" class="learn-more">Learn More</a>
                     </div>
                 </div>
-        
+
                 <!-- 24/7 Support -->
                 <div class="service-box">
                     <div class="service-icon">
@@ -247,7 +250,7 @@
                         <a href="#" class="learn-more">Learn More</a>
                     </div>
                 </div>
-        
+
                 <!-- Online Ordering -->
                 <div class="service-box">
                     <div class="service-icon">
@@ -265,141 +268,435 @@
         </section>
 
         <!-- Shop section -->
-<section id="shop" class="shop">
-    <h2>Our Food Shop</h2>
-    <div class="shop-filter">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="main">Main Course</button>
-        <button class="filter-btn" data-category="dessert">Desserts</button>
-        <button class="filter-btn" data-category="beverage">Beverages</button>
-    </div>
-    <div class="shop-container">
-        <!-- Shop Item 1 -->
-        <div class="shop-item" data-category="main">
-            <div class="shop-image">
-                <!-- <img src="./assets/img/jollof1.jpg" alt="Jollof Rice"> -->
-                <div class="shop-overlay">
-                    <button class="quick-view" title="view">
-                        <i class="fa-solid fa-eye"></i>
-                    </button>
-                    <button class="add-wishlist" title="add">
-                        <i class="fa-solid fa-heart"></i>
-                    </button>
-                </div>
+        <section id="shop" class="shop">
+            <h2>Our Food Shop</h2>
+            <div class="shop-filter">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="main">Main Course</button>
+                <button class="filter-btn" data-category="dessert">Desserts</button>
+                <button class="filter-btn" data-category="beverage">Beverages</button>
             </div>
-            <div class="shop-content">
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <span>(4.5)</span>
+            <div class="shop-container">
+                <!-- Shop Item 1 -->
+                <div class="shop-item" data-category="main">
+                    <div class="shop-image">
+                        <!-- <img src="./assets/img/jollof1.jpg" alt="Jollof Rice"> -->
+                        <div class="shop-overlay">
+                            <button class="quick-view" title="view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <button class="add-wishlist" title="add">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <h3>Jollof Rice Special</h3>
+                        <p class="price">₵45.99</p>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
-                <h3>Jollof Rice Special</h3>
-                <p class="price">₵45.99</p>
-                <button class="add-to-cart">
-                    <i class="fa-solid fa-cart-plus"></i>
-                    Add to Cart
-                </button>
-            </div>
-        </div>
 
-        <!-- Shop Item 2 -->
-        <div class="shop-item" data-category="main">
-            <div class="shop-image">
-                <img src="./assets/img/banku.png" alt="Banku">
-                <div class="shop-overlay">
-                    <button class="quick-view" title="view">
-                        <i class="fa-solid fa-eye"></i>
-                    </button>
-                    <button class="add-wishlist" title="add">
-                        <i class="fa-solid fa-heart"></i>
-                    </button>
+                <!-- Shop Item 2 -->
+                <div class="shop-item" data-category="main">
+                    <div class="shop-image">
+                        <img src="./assets/img/banku.png" alt="Banku">
+                        <div class="shop-overlay">
+                            <button class="quick-view" title="view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <button class="add-wishlist" title="add">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <h3>Banku and Tilapia</h3>
+                        <p class="price">₵55.99</p>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="shop-content">
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(4.0)</span>
-                </div>
-                <h3>Banku and Tilapia</h3>
-                <p class="price">₵55.99</p>
-                <button class="add-to-cart">
-                    <i class="fa-solid fa-cart-plus"></i>
-                    Add to Cart
-                </button>
-            </div>
-        </div>
 
-        <!-- Shop Item 3 -->
-        <div class="shop-item" data-category="dessert">
-            <div class="shop-image">
-                <img src="./assets/img/dish.png" alt="Dessert">
-                <div class="shop-overlay">
-                    <button class="quick-view" title="view">
-                        <i class="fa-solid fa-eye"></i>
-                    </button>
-                    <button class="add-wishlist" title="add">
-                        <i class="fa-solid fa-heart"></i>
-                    </button>
+                <!-- Shop Item 3 -->
+                <div class="shop-item" data-category="dessert">
+                    <div class="shop-image">
+                        <img src="./assets/img/dish.png" alt="Dessert">
+                        <div class="shop-overlay">
+                            <button class="quick-view" title="view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <button class="add-wishlist" title="add">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <h3>Special Dessert</h3>
+                        <p class="price">₵35.99</p>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="shop-content">
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <span>(5.0)</span>
-                </div>
-                <h3>Special Dessert</h3>
-                <p class="price">₵35.99</p>
-                <button class="add-to-cart">
-                    <i class="fa-solid fa-cart-plus"></i>
-                    Add to Cart
-                </button>
-            </div>
-        </div>
 
-        <!-- Shop Item 4 -->
-        <div class="shop-item" data-category="beverage">
-            <div class="shop-image">
-                <!-- <img src="./assets/img/food.jpg" alt="Smoothie"> -->
-                <div class="shop-overlay">
-                    <button class="quick-view" title="view">
-                        <i class="fa-solid fa-eye"></i>
-                    </button>
-                    <button class="add-wishlist" title="add">
-                        <i class="fa-solid fa-heart"></i>
-                    </button>
+                <!-- Shop Item 4 -->
+                <div class="shop-item" data-category="beverage">
+                    <div class="shop-image">
+                        <!-- <img src="./assets/img/food.jpg" alt="Smoothie"> -->
+                        <div class="shop-overlay">
+                            <button class="quick-view" title="view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <button class="add-wishlist" title="add">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="shop-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>(3.5)</span>
+                        </div>
+                        <h3>Fresh Smoothie</h3>
+                        <p class="price">₵25.99</p>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="shop-content">
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
-                    <span>(3.5)</span>
+        </section>
+
+        <!-- About section -->
+        <section id="about" class="about">
+            <div class="about-image">
+                <img src="./assets/img/main.png" alt="Chef preparing food">
+                <div class="experience-card">
+                    <span>15+</span>
+                    <p>Years celebrating Ghanaian cuisine</p>
                 </div>
-                <h3>Fresh Smoothie</h3>
-                <p class="price">₵25.99</p>
-                <button class="add-to-cart">
-                    <i class="fa-solid fa-cart-plus"></i>
-                    Add to Cart
+            </div>
+            <div class="about-content">
+                <p class="eyebrow">Our Story</p>
+                <h2>Crafted with heart, prepared with heritage</h2>
+                <p>
+                    Let’s Dine began as a small Accra kitchen sharing cherished family recipes. Today, we serve guests
+                    across the city with the same care—sourcing local produce, partnering with smallholder farms, and
+                    cooking everything to order.
+                </p>
+                <ul class="about-list">
+                    <li>
+                        <i class="fa-solid fa-seedling"></i>
+                        Farm-fresh produce sourced daily
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-utensils"></i>
+                        Chef-designed seasonal tasting menus
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-face-smile"></i>
+                        4.9/5 community satisfaction score
+                    </li>
+                </ul>
+                <div class="stats">
+                    <div class="stat">
+                        <span>250K+</span>
+                        <p>Orders Fulfilled</p>
+                    </div>
+                    <div class="stat">
+                        <span>120</span>
+                        <p>Partnered Farmers</p>
+                    </div>
+                    <div class="stat">
+                        <span>45</span>
+                        <p>Menu Creations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>Guests can’t stop talking</h2>
+            <p class="subtitle">Real stories from food lovers across Ghana</p>
+            <div class="testimonial-grid">
+                <article class="testimonial-card">
+                    <div class="profile">
+                        <img src="./assets/img/jollof.jpg" alt="Happy customer Edna">
+                        <div>
+                            <h3>Edna Bentum</h3>
+                            <p>Food blogger & stylist</p>
+                        </div>
+                    </div>
+                    <p class="feedback">
+                        “The flavors remind me of weekends with my grandmother. I recommend the seafood pasta—it’s rich,
+                        creamy, and unforgettable.”
+                    </p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.8</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="profile">
+                        <img src="./assets/img/food2.jpg" alt="Customer Nana">
+                        <div>
+                            <h3>Nana K. Owusu</h3>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
+                    <p class="feedback">
+                        “They cater every launch event for our startup hub. Service is polished, on-time, and they
+                        tailor
+                        the menu perfectly to our guests.”
+                    </p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="profile">
+                        <img src="./assets/img/jollof3.jpg" alt="Couple review">
+                        <div>
+                            <h3>Ama & Kojo</h3>
+                            <p>Weekend foodies</p>
+                        </div>
+                    </div>
+                    <p class="feedback">
+                        “Ordering through the shop is so easy. The team even added a complimentary dessert when they saw
+                        it was our anniversary.”
+                    </p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Reservation / CTA -->
+        <section id="reservation" class="cta">
+            <div class="cta-content">
+                <p class="eyebrow">Plan ahead</p>
+                <h2>Reserve a table or book private catering</h2>
+                <p>
+                    Host birthdays, product launches, or intimate date nights with bespoke menus, sommeliers, and live
+                    plating stations. Fill the form and our concierge will call within 30 minutes.
+                </p>
+                <button class="primary-btn">
+                    <i class="fa-solid fa-phone"></i>
+                    Talk to our concierge
                 </button>
             </div>
-        </div>
-    </div>
-</section>
+            <form class="reservation-form">
+                <h3>Reserve Now</h3>
+                <div class="form-group">
+                    <label for="guestName">Full Name</label>
+                    <input type="text" id="guestName" name="guestName" placeholder="Ama Owusu" required>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="guestEmail">Email</label>
+                        <input type="email" id="guestEmail" name="guestEmail" placeholder="hello@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guestPhone">Phone</label>
+                        <input type="tel" id="guestPhone" name="guestPhone" placeholder="+233 54 123 4567" required>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="guestDate">Date</label>
+                        <input type="date" id="guestDate" name="guestDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guestCount">Guests</label>
+                        <input type="number" id="guestCount" name="guestCount" min="1" max="30" value="2" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="occasion">Occasion</label>
+                    <select id="occasion" name="occasion">
+                        <option>Casual Dining</option>
+                        <option>Birthday</option>
+                        <option>Corporate</option>
+                        <option>Anniversary</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Special Notes</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Allergies, setup, music..."></textarea>
+                </div>
+                <button type="submit" class="primary-btn">
+                    <i class="fa-solid fa-bowl-rice"></i>
+                    Confirm booking
+                </button>
+            </form>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact">
+            <div class="contact-info">
+                <p class="eyebrow">Need help?</p>
+                <h2>Reach our support team anytime</h2>
+                <p>Our live agents respond within minutes. Visit us or send a message—either way, we’re ready to serve.
+                </p>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Restaurant</strong>
+                            <p>12 Oxford Street, Osu, Accra</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:orders@letsdine.com">orders@letsdine.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <div>
+                            <strong>Call / WhatsApp</strong>
+                            <a href="tel:+233541234567">+233 54 123 4567</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="opening-hours">
+                    <h3>Opening Hours</h3>
+                    <p>Mon - Thu: 10:00am - 10:00pm</p>
+                    <p>Fri - Sun: 10:00am - Midnight</p>
+                </div>
+            </div>
+            <form class="contact-form">
+                <h3>Drop us a message</h3>
+                <div class="form-group">
+                    <label for="contactName">Name</label>
+                    <input type="text" id="contactName" name="contactName" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email</label>
+                    <input type="email" id="contactEmail" name="contactEmail" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactSubject">Subject</label>
+                    <input type="text" id="contactSubject" name="contactSubject"
+                        placeholder="Reservation, enquiry, feedback">
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" name="contactMessage" rows="4" placeholder="How can we help?"
+                        required></textarea>
+                </div>
+                <button type="submit" class="primary-btn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send message
+                </button>
+            </form>
+        </section>
     </main>
+
+    <footer>
+        <div class="footer-brand">
+            <div class="logo">LET<span>'S DINE</span></div>
+            <p>Authentic plates, delivered with Ghanaian warmth. Join the community and never miss seasonals.</p>
+            <div class="socials">
+                <a href="https://facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h3>Explore</h3>
+            <a href="#menu">Menu</a>
+            <a href="#service">Services</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="footer-links">
+            <h3>Support</h3>
+            <a href="#contact">Contact</a>
+            <a href="#reservation">Reservations</a>
+            <a href="#">Gift cards</a>
+            <a href="#">Careers</a>
+        </div>
+        <div class="newsletter">
+            <h3>Join the insiders list</h3>
+            <p>Weekly chef specials + tasting invites.</p>
+            <form>
+                <label class="sr-only" for="newsletterEmail">Email address</label>
+                <div class="input-wrap">
+                    <input type="email" id="newsletterEmail" placeholder="Email address" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Let’s Dine. All rights reserved.</p>
+            <div class="policies">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
