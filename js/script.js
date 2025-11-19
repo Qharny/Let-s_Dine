@@ -140,6 +140,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            if (emailInput && emailInput.value.trim()) {
+                newsletterForm.reset();
+                alert('Thanks for subscribing!'); // Replace with custom toast if needed
+            }
+        });
+    }
+});
+
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
 
